@@ -170,12 +170,66 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
+  <Choose>
+    <When Condition="$(Configuration.Contains('Tx150'))">
+      <ItemGroup>
+        <Reference Include="Tecnomatix.Engineering">
+          <HintPath>C:\Program Files\Tecnomatix_15.0\eMPower\Tecnomatix.Engineering.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+    <When Condition="$(Configuration.Contains('Tx151'))">
+      <ItemGroup>
+        <Reference Include="Tecnomatix.Engineering">
+          <HintPath>C:\Program Files\Tecnomatix_15.1\eMPower\Tecnomatix.Engineering.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+    <When Condition="$(Configuration.Contains('Tx160'))">
+      <ItemGroup>
+        <Reference Include="Tecnomatix.Engineering">
+          <HintPath>C:\Program Files\Tecnomatix_16.0\eMPower\Tecnomatix.Engineering.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+    <When Condition="$(Configuration.Contains('Tx161'))">
+      <ItemGroup>
+        <Reference Include="Tecnomatix.Engineering">
+          <HintPath>C:\Program Files\Tecnomatix_16.1\eMPower\Tecnomatix.Engineering.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+    <When Condition="$(Configuration.Contains('Tx170'))">
+      <ItemGroup>
+        <Reference Include="Tecnomatix.Engineering">
+          <HintPath>C:\Program Files\Tecnomatix_17.0\eMPower\Tecnomatix.Engineering.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
   <ItemGroup>
+    <Compile Include="CommandEnablers\RwAlwaysTrueCommandEnabler.cs" />
+    <Compile Include="CommandEnablers\RwEmsCommandEnabler.cs" />
+    <Compile Include="CommandEnablers\RwSingleRobotCommandEnabler.cs" />
+    <Compile Include="Extensions\RwTxRobotExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\RwFileAndDirectoryUtilities.cs" />
+    <Compile Include="Utilities\RwFolderBrowserDialogCreationData.cs" />
+    <Compile Include="Utilities\RwOpenFileDialogCreationData.cs" />
+    <Compile Include="Utilities\RwSaveFileDialogCreationData.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
