@@ -3,13 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robworld.ProcessSimulate.Commands", "Robworld.ProcessSimulate.Commands\Robworld.ProcessSimulate.Commands.csproj", "{9868C446-D88A-4DB0-A0FC-23DE5EF97D01}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robworld.ProcessSimulate.CECommands", "Robworld.ProcessSimulate.Commands\Robworld.ProcessSimulate.CECommands.csproj", "{9868C446-D88A-4DB0-A0FC-23DE5EF97D01}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robworld.ProcessSimulate.Library", "Robworld.ProcessSimulate.Library\Robworld.ProcessSimulate.Library.csproj", "{2B0C7D94-5390-4573-8A0A-94D05B40F368}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robworld.ProcessSimulate.Resources", "Robworld.ProcessSimulate.Resources\Robworld.ProcessSimulate.Resources.csproj", "{C4690DCD-1B21-440C-B912-09334126968D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robworld.ProcessSimulate.Viewers", "Robworld.ProcessSimulate.Viewers\Robworld.ProcessSimulate.Viewers.csproj", "{BACD2D07-064A-4C39-BD77-838F4F5A7585}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1743CFD3-F80C-47E1-890D-FE957E35DF64}"
+	ProjectSection(SolutionItems) = preProject
+		Resources\RobworldToolboxCE.xml = Resources\RobworldToolboxCE.xml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
