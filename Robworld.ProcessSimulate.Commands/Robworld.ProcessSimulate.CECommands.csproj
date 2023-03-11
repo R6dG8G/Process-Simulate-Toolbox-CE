@@ -7,8 +7,8 @@
     <ProjectGuid>{9868C446-D88A-4DB0-A0FC-23DE5EF97D01}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Robworld.ProcessSimulate.Commands</RootNamespace>
-    <AssemblyName>Robworld.ProcessSimulate.Commands</AssemblyName>
+    <RootNamespace>Robworld.ProcessSimulate.CECommands</RootNamespace>
+    <AssemblyName>Robworld.ProcessSimulate.CECommands</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -173,9 +173,118 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="$(Configuration.Contains('Tx150'))">
+      <ItemGroup>
+        <Reference Include="Robworld.ProcessSimulate.Library">
+          <HintPath>C:\Program Files\Tecnomatix_15.0\eMPower\Robworld.ProcessSimulate.Library.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Robworld.ProcessSimulate.Resources">
+          <HintPath>C:\Program Files\Tecnomatix_15.0\eMPower\Robworld.ProcessSimulate.Resources.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Tecnomatix.Engineering">
+          <HintPath>C:\Program Files\Tecnomatix_15.0\eMPower\Tecnomatix.Engineering.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Tecnomatix.Engineering.Ui">
+          <HintPath>C:\Program Files\Tecnomatix_15.0\eMPower\Tecnomatix.Engineering.Ui.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+    <When Condition="$(Configuration.Contains('Tx151'))">
+      <ItemGroup>
+        <Reference Include="Robworld.ProcessSimulate.Library">
+          <HintPath>C:\Program Files\Tecnomatix_15.1\eMPower\Robworld.ProcessSimulate.Library.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Robworld.ProcessSimulate.Resources">
+          <HintPath>C:\Program Files\Tecnomatix_15.1\eMPower\Robworld.ProcessSimulate.Resources.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Tecnomatix.Engineering">
+          <HintPath>C:\Program Files\Tecnomatix_15.1\eMPower\Tecnomatix.Engineering.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Tecnomatix.Engineering.Ui">
+          <HintPath>C:\Program Files\Tecnomatix_15.1\eMPower\Tecnomatix.Engineering.Ui.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+    <When Condition="$(Configuration.Contains('Tx160'))">
+      <ItemGroup>
+        <Reference Include="Robworld.ProcessSimulate.Library">
+          <HintPath>C:\Program Files\Tecnomatix_16.0\eMPower\Robworld.ProcessSimulate.Library.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Robworld.ProcessSimulate.Resources">
+          <HintPath>C:\Program Files\Tecnomatix_16.0\eMPower\Robworld.ProcessSimulate.Resources.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Tecnomatix.Engineering">
+          <HintPath>C:\Program Files\Tecnomatix_16.0\eMPower\Tecnomatix.Engineering.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Tecnomatix.Engineering.Ui">
+          <HintPath>C:\Program Files\Tecnomatix_16.0\eMPower\Tecnomatix.Engineering.Ui.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+    <When Condition="$(Configuration.Contains('Tx161'))">
+      <ItemGroup>
+        <Reference Include="Robworld.ProcessSimulate.Library">
+          <HintPath>C:\Program Files\Tecnomatix_16.1\eMPower\Robworld.ProcessSimulate.Library.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Robworld.ProcessSimulate.Resources">
+          <HintPath>C:\Program Files\Tecnomatix_16.1\eMPower\Robworld.ProcessSimulate.Resources.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Tecnomatix.Engineering">
+          <HintPath>C:\Program Files\Tecnomatix_16.1\eMPower\Tecnomatix.Engineering.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Tecnomatix.Engineering.Ui">
+          <HintPath>C:\Program Files\Tecnomatix_16.1\eMPower\Tecnomatix.Engineering.Ui.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+    <When Condition="$(Configuration.Contains('Tx170'))">
+      <ItemGroup>
+        <Reference Include="Robworld.ProcessSimulate.Library">
+          <HintPath>C:\Program Files\Tecnomatix_17.0\eMPower\Robworld.ProcessSimulate.Library.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Robworld.ProcessSimulate.Resources">
+          <HintPath>C:\Program Files\Tecnomatix_17.0\eMPower\Robworld.ProcessSimulate.Resources.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Tecnomatix.Engineering">
+          <HintPath>C:\Program Files\Tecnomatix_17.0\eMPower\Tecnomatix.Engineering.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Tecnomatix.Engineering.Ui">
+          <HintPath>C:\Program Files\Tecnomatix_17.0\eMPower\Tecnomatix.Engineering.Ui.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="OpenMDDCommand.cs" />
+    <Compile Include="OpenMDD\RwOpenMDD.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Images\OpenMDD16x16.bmp" />
+    <EmbeddedResource Include="Images\OpenMDD32x32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
