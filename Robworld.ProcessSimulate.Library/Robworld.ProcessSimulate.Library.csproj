@@ -226,6 +226,8 @@
     <Compile Include="CommandEnablers\RwSingleRobotCommandEnabler.cs" />
     <Compile Include="Extensions\RwTxRobotExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\RwRobotDataService.cs" />
+    <Compile Include="Services\RwStudyDataService.cs" />
     <Compile Include="Utilities\RwFileAndDirectoryUtilities.cs" />
     <Compile Include="Utilities\RwFolderBrowserDialogCreationData.cs" />
     <Compile Include="Utilities\RwOpenFileDialogCreationData.cs" />
